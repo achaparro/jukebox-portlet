@@ -134,6 +134,15 @@ public class ArtistStagedModelDataHandler
 				artistElement, FileEntry.class,
 				PortletDataContext.REFERENCE_TYPE_WEAK);
 
+		// Fix for EE
+
+		if (attachmentElements.isEmpty()) {
+			attachmentElements =
+				portletDataContext.getReferenceDataElements(
+					artistElement, DLFileEntry.class,
+					PortletDataContext.REFERENCE_TYPE_WEAK);
+		}
+
 		for (Element attachmentElement : attachmentElements) {
 			String path = attachmentElement.attributeValue("path");
 

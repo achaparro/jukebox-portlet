@@ -181,8 +181,17 @@ public class AlbumStagedModelDataHandler
 
 		List<Element> attachmentElements =
 			portletDataContext.getReferenceDataElements(
-				albumElement, FileEntry.class,
+				albumElement, DLFileEntry.class,
 				PortletDataContext.REFERENCE_TYPE_WEAK);
+
+		// Fix for EE
+
+		if (attachmentElements.isEmpty()) {
+			attachmentElements =
+				portletDataContext.getReferenceDataElements(
+					albumElement, DLFileEntry.class,
+					PortletDataContext.REFERENCE_TYPE_WEAK);
+		}
 
 		for (Element attachmentElement : attachmentElements) {
 			String path = attachmentElement.attributeValue("path");

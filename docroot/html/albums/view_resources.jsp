@@ -40,9 +40,7 @@ else {
 %>
 
 <c:choose>
-	<c:when test="<%= portletDisplayDDMTemplateId > 0 %>">
-		<%= PortletDisplayTemplateUtil.renderDDMTemplate(pageContext, portletDisplayDDMTemplateId, albums) %>
-	</c:when>
+	<%-- Display rendered content if an Application Display Template is selected --%>
 	<c:when test="<%= albums.isEmpty() %>">
 		<div class="alert alert-info">
 			<c:choose>

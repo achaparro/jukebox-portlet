@@ -26,22 +26,7 @@ long displayStyleGroupId = GetterUtil.getLong(portletPreferences.getValue("displ
 <aui:form action="<%= configurationURL %>" method="post" name="fm">
 	<aui:input name="<%= Constants.CMD %>" type="hidden" value="<%= Constants.UPDATE %>" />
 
-	<aui:fieldset>
-		<div class="display-template">
-
-			<%
-			TemplateHandler templateHandler = TemplateHandlerRegistryUtil.getTemplateHandler(Album.class.getName());
-			%>
-
-			<liferay-ui:ddm-template-selector
-				classNameId="<%= PortalUtil.getClassNameId(templateHandler.getClassName()) %>"
-				displayStyle="<%= displayStyle %>"
-				displayStyleGroupId="<%= displayStyleGroupId %>"
-				refreshURL="<%= PortalUtil.getCurrentURL(request) %>"
-				showEmptyOption="<%= true %>"
-			/>
-		</div>
-	</aui:fieldset>
+	<%-- Add template selector --%>
 
 	<aui:button-row>
 		<aui:button type="submit" />

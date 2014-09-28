@@ -26,7 +26,7 @@
 		<portlet-name>albums</portlet-name>
 		<permissions>
 			<supports>
-				<action-key>ADD_PORTLET_DISPLAY_TEMPLATE</action-key>
+				<!-- Add APPLICATION DISPLAY TEMPLATES action key-->
 				<action-key>CONFIGURATION</action-key>
 				<action-key>VIEW</action-key>
 			</supports>
@@ -37,7 +37,7 @@
 				<action-key>VIEW</action-key>
 			</guest-defaults>
 			<guest-unsupported>
-				<action-key>ADD_PORTLET_DISPLAY_TEMPLATE</action-key>
+				<!-- Add APPLICATION DISPLAY TEMPLATES action key-->
 				<action-key>CONFIGURATION</action-key>
 			</guest-unsupported>
 		</permissions>

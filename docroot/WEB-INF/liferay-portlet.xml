@@ -29,7 +29,7 @@
 		<portlet-data-handler-class>org.liferay.jukebox.lar.JukeboxPortletDataHandler</portlet-data-handler-class>
 		<staged-model-data-handler-class>org.liferay.jukebox.lar.AlbumStagedModelDataHandler</staged-model-data-handler-class>
 		<staged-model-data-handler-class>org.liferay.jukebox.lar.ArtistStagedModelDataHandler</staged-model-data-handler-class>
-		<template-handler>org.liferay.jukebox.template.AlbumsPortletDisplayTemplateHandler</template-handler>
+		<!-- Declare template handler -->
 		<asset-renderer-factory>org.liferay.jukebox.asset.AlbumAssetRendererFactory</asset-renderer-factory>
 		<instanceable>false</instanceable>
 		<scopeable>true</scopeable>
